@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* card gradient accent */
+.accent-border {
+  position: relative;
+  border-radius: 1.5rem;
+}
+
+.accent-border::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(130deg, rgba(99, 102, 241, 0.45), rgba(14, 165, 233, 0.45), rgba(236, 72, 153, 0.25));
+  filter: blur(0.2px);
+  opacity: 0.75;
+  z-index: -1;
+}
